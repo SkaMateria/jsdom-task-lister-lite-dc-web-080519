@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
   
 });
-
+// turn into arrow functions to keep them from being global variables. 
+//Don't forget "return" Be sure to invoke the new functions in later code.
 let description = document.getElementById("new-task-description")
 let tasks = document.getElementById("tasks")
 let taskButton = document.querySelector("#create-task-form")
@@ -13,7 +14,6 @@ let colors = ["Select", "Red", "Yellow", "Green"]
 
 // "x" delete button functionality
 function delete123(e) {
-  console.log("hi")
   let value = e.target.parentNode
   value.remove();
 }
@@ -39,12 +39,14 @@ function buttonTest(event) {
   newRow.innerText = description.value
   let deleteButton = document.createElement("button")
   let coloredButton = document.createElement("select");
-
+  
   deleteButton.className = `${description.value}`;
   deleteButton.innerText = "x"
   newRow.appendChild(deleteButton)
   newRow.appendChild(coloredButton);
   tasks.appendChild(newRow)
+
+
 
 
 
