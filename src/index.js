@@ -11,12 +11,14 @@ let tasks = document.getElementById("tasks")
 let taskButton = document.querySelector("#create-task-form")
 let colors = ["Select", "Red", "Yellow", "Green"]
 
+// "x" delete button functionality
 function delete123(e) {
   console.log("hi")
   let value = e.target.parentNode
   value.remove();
 }
 
+// "color selector" functionality
 function colorChange(event) {
   if(event.target.value == "Red"){
     debugger
